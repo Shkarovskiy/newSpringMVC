@@ -15,9 +15,9 @@ public class FirstController {
 	private String messageValue;
 	
 	@GetMapping("/hello")
-	public String sayHello(HttpServletRequest request, Model model) {
-		String name = request.getParameter("name");
-		String surname = request.getParameter("surname");
+	public String sayHello(@RequestParam(value = "name", required = false) String name,
+							@RequestParam(value = "surname", required = false) String surname,
+						 Model model) {
 		
 		messageValue = "Hi my dear " + name + " " + surname;
 		model.addAttribute(messageKey, messageValue);
