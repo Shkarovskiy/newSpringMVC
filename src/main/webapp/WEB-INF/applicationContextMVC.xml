@@ -30,4 +30,5 @@
         <property name="order" value="1"/>
         <property name="viewNames" value="*"/>
     </bean>
+    
 </beans>
